@@ -18,7 +18,26 @@ table, tr, td{
 </style>
 <script>
 
-<!-- JavaScript goes here -->
+  //Exercise 1
+  let now = new Date();
+  function ekaButton() {
+    alert('You clicked me! ' + now);
+  }
+
+  function showTable() {
+
+  }
+  //Exercise 2
+  function hiiriPaalla () {
+    console.log('Stepped over my mouse!');
+  }
+
+  function hiiriPois () {
+    console.log('Bye bye mouse!');
+  }
+
+  var x = getElementById("textdata");
+
 
 
 
@@ -33,7 +52,9 @@ good idea to save the lines of code you write during the exercises for later use
 <h2>Exercise 1</h2>
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
 <p>
-  <button onclick>Button 1</button>
+
+  //Exercise 1, Button 1
+  <button onclick ="ekaButton()">Button 1</button>
   <button>Button 2</button>
   <button>Button 3</button>
 </p>
@@ -111,7 +132,7 @@ var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde",
 </xmp>
 </ul>
 
-<h2>Exercise 2</h2>
+<h2 onmouseover = "hiiriPaalla()" onmouseout="hiiriPois()">Exercise 2</h2>
 
 <ul>
   <li>Add an&nbsp;onMouseOver event on the&nbsp;Heading "Exercise 2" of this page.&nbsp;It should&nbsp;fire when the users mouse is moved
