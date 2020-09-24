@@ -4,7 +4,13 @@
 
     <!-- script tag is where Javascript goes to -->
     <script>
-       
+        
+        var r = confirm("Are you a student? Click OK if you are and Cancel if you are not.");
+        if (r == true) {
+            document.write("Welcome Student!");
+        } else {
+            document.write("Sorry, this page is for students only!");
+        }
     </script>
 
 </head>

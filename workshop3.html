@@ -23,9 +23,9 @@ table, tr, td{
   function ekaButton() {
     alert('You clicked me! ' + now);
   }
-
+    var taulu = document.getElementById("example");
   function showTable() {
-
+    document.write(taulu);
   }
   //Exercise 2
   function hiiriPaalla () {
@@ -55,7 +55,7 @@ good idea to save the lines of code you write during the exercises for later use
 
   //Exercise 1, Button 1
   <button onclick ="ekaButton()">Button 1</button>
-  <button>Button 2</button>
+  <button onclick ="showTable()">Button 2</button>
   <button>Button 3</button>
 </p>
 
