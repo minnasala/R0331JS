@@ -23,9 +23,53 @@ table, tr, td{
   function ekaButton() {
     alert('You clicked me! ' + now);
   }
-    var taulu = document.getElementById("example");
+  var taulu = `
+  <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>$162,700</td>
+            </tr>
+
+        </tbody>
+    </table>
+  `;
   function showTable() {
     document.write(taulu);
+
+  }
+  function showTable2() {
+
   }
   //Exercise 2
   function hiiriPaalla () {
@@ -36,10 +80,18 @@ table, tr, td{
     console.log('Bye bye mouse!');
   }
  //Exercise 3
-  var x = getElementById("textdata");
+ 
 
   function myFocus() {
-    x.style.background = "pink";
+    document.getElementById("textdata").value = "Please fill the form with proper data.";
+    document.getElementById("textdata").style.backgroundColor = "red";
+
+  }
+
+  function nappainLaskuri() {
+    x = document.getElementById("textarea").value;
+    y = x.length + 1;
+    document.getElementById("demo").innerHTML = y;
   }
 
  
@@ -63,7 +115,7 @@ good idea to save the lines of code you write during the exercises for later use
   //Exercise 1, Button 1
   <button onclick ="ekaButton()">Button 1</button>
   <button onclick ="showTable()">Button 2</button>
-  <button>Button 3</button>
+  <button onclick ="showTable2()">Button 3</button>
 </p>
 
 <ul>
@@ -158,8 +210,9 @@ modifying the background color of the box as well. &nbsp;
 command:   <i>document.getElementById("textdata").value</i>. We will study the forms deeper in Workshops 4 and 5.</li>
 </ul>
 <form>
-  <textarea id="textdata"></textarea><br>
-    <button>Send me</button>
+  <textarea id="textdata" onfocus ="myFocus()" onkeydown ="nappainLaskuri()"></textarea><br>
+  <p id="demo"></p>
+  <button>Send me</button>
 </form>
 <h2>Exercise 4</h2>
 So far you have hardcoded the events into HTML tags. Make a copy of your exercise file and try to add the events dynamically, without touching the HTML at all. This can be 
