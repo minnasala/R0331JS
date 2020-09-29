@@ -41,9 +41,32 @@ function buttonTwo() {
 //button 3
 
 function buttonThree() {
+  var uusi = document.createElement('p');
+  uusi.innerHTML = "<i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.</i>";
+  uusi.setAttribute('id', 'newData');
+  var newPlace = document.getElementsByTagName('p');
+  newPlace[4].appendChild(uusi);
+  var bgColor = document.getElementsByTagName('body')[0];
+  bgColor.style.backgroundColor = "yellow";
+}
+
+//Exercise 2, Hide me
+function hide() {
+  var piilo = document. getElementById('data');
+  piilo.style.display = "none";
+}
+
+//Exercise 2, Show me
+function show() {
+  var piilo = document. getElementById('data');
+  piilo.style.display = "block";
+}
+
+// Exercise 2, Surprise
+function surprise ()
+</script> {
   
 }
-</script>
 
 <h1>Workshop 4: DOM Scripting</h1>
 <hr />
@@ -55,7 +78,7 @@ function buttonThree() {
 <p>
   <button onclick="buttonOne()">Button 1</button>
   <button onclick="buttonTwo()">Button 2</button>
-  <button onclick="">Button 3</button>
+  <button onclick="buttonThree()">Button 3</button>
 </p>
 
 <ul>
@@ -79,7 +102,7 @@ function buttonThree() {
     Show me</label>
   <br>
   <label>
-    <input type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
+    <input onchange="surprise()" type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
     <span id="surpise">Surprise</span>
   </label>
 </p>
