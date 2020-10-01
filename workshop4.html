@@ -61,13 +61,35 @@ function show() {
   var piilo = document. getElementById('data');
   piilo.style.display = "block";
 }
-
+ 2
 // Exercise 2, Surprise
 function surprise () {
   document.getElementsByClassName('surprise')[0].style.fontSize = 20;
   document.getElementsByClassName('surprise')[1].style.fontSize = 20;
   document.getElementsByClassName('surprise')[2].style.fontSize = 20;
 }
+
+//Exercise 3
+function dropDown() {
+  var x = document.getElementById("mySelect").value;
+  if(x == "BMW") {
+    alert('BMW');
+  }else if(x == "Audi") {
+    alert('Audi');
+  }else if(x == "Mercedes") {
+    alert('Mercedes')
+  } else {
+    alert('Volvo');
+  }
+}
+
+//function mouseOn() {
+  //document.getElementsByTagName('img').style.borderColor = "blue";
+//}
+
+//function mouseOff() {
+  //document.getElementsByTagName('img').style.borderColor = "none";
+//}
 </script> 
   
 
@@ -121,7 +143,7 @@ function surprise () {
 <li>When the mouse is moved on top of the image, a colored border should appear surrounding it. On mouse out, border should disappear</li>
 <li>When you have accomplished the above, change the image (id=&quot;carimage&quot;) below based on the users choice on the pulldown menu below. Find appropriate images from the web.
   <p>Select a new car from the list.</p>
-  <select name="mySelect" id="mySelect" onchange="">
+  <select name="mySelect" id="mySelect" onchange="dropDown()">
     <option value="BMW">BMW         
     <option value="Audi">Audi
     <option value="Mercedes">Mercedes
@@ -129,7 +151,7 @@ function surprise () {
   </select>
   <br>
   <br>
-<img onmouseover="" onmouseout="" style="left: 0px; opacity: 1;" src="http://cdn.bmwblog.com/wp-content/uploads/2015/11/BMW-2-Series-Gran-Coupe-Rendering.jpg" width="400" id="carimage"/></li>
+<img onmouseover="" onmouseout="" style="left: 0px; opacity: 1; border: 1;" src="https://cimg3.ibsrv.net/gimg/www.carsdirect.com-gallery_site/860x574_100/p90334488_highres_5ede1a3d915079f432e6c1e0ab9d59275fe53ec9.jpg" width="400" id="carimage"/></li>
 <h2>Exercise 4: Moving things around</h2>
 <ul>
   <li>
