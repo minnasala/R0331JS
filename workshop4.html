@@ -83,13 +83,32 @@ function dropDown() {
   }
 }
 
-//function mouseOn() {
-  //document.getElementsByTagName('img').style.borderColor = "blue";
-//}
+function mouseOn() {
+  document.getElementById('carimage').style.borderColor = "00";
+}
 
-//function mouseOff() {
-  //document.getElementsByTagName('img').style.borderColor = "none";
-//}
+function mouseOff() {
+  document.getElementById('carimage').style.borderColor = "white";
+}
+
+//Exercise 4
+function changePosition() {
+  var pic = document.getElementById('carimage');
+  x.style.left = '-200px';
+  x.style.
+}
+
+function doMove () {
+
+}
+
+function fadeOut() {
+
+}
+
+function hide() {
+
+}
 </script> 
   
 
@@ -151,7 +170,7 @@ function dropDown() {
   </select>
   <br>
   <br>
-<img onmouseover="" onmouseout="" style="left: 0px; opacity: 1; border: 1;" src="https://cimg3.ibsrv.net/gimg/www.carsdirect.com-gallery_site/860x574_100/p90334488_highres_5ede1a3d915079f432e6c1e0ab9d59275fe53ec9.jpg" width="400" id="carimage"/></li>
+<img onmouseover="mouseOn()" onmouseout="mouseOff()" style="left: 0px; opacity: 1; border: 2; border-color: white;" src="https://cimg3.ibsrv.net/gimg/www.carsdirect.com-gallery_site/860x574_100/p90334488_highres_5ede1a3d915079f432e6c1e0ab9d59275fe53ec9.jpg" width="400" id="carimage"/></li>
 <h2>Exercise 4: Moving things around</h2>
 <ul>
   <li>
