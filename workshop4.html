@@ -95,19 +95,27 @@ function mouseOff() {
 
 //Exercise 4
 function changePosition() {
-  var pic = document.getElementById('carimage');
-  x.style.left = '-200px';
-  x.style.down = '500px';
+  var imgObj= document.getElementById('carimage');
+  imgObj.style.left = '-200px';
+  //imgObj.style.down = '500px';
 }
 
-//function doMove () {
+function doMove () {
   var imgObject = document.getElementById('carimage');
-  imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
-//}
+  imgObject.style.left = parseInt(imgObject.style.left) + 10 + 'px';
+}
 
 
 
 //function fadeOut() {
+  var imObj = document.getElementById('carimage');
+  if(imObj.style.opacity > 0) {
+    var o = 1;
+    function opDown () {
+      o -= 0.01;
+      }
+    }
+  }
 
 //}
 
