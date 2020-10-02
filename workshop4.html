@@ -52,7 +52,7 @@ function buttonThree() {
 
 //Exercise 2, Hide me
 function hide() {
-  var piilo = document. getElementById('data');
+  var piilo = document.getElementById('data');
   piilo.style.display = "none";
 }
 
@@ -86,7 +86,7 @@ function dropDown() {
 }
 
 function mouseOn() {
-  document.getElementById('carimage').style.borderColor = "00";
+  document.getElementById('carimage').style.borderColor = "blue";
 }
 
 function mouseOff() {
@@ -107,21 +107,36 @@ function doMove () {
 
 
 
-//function fadeOut() {
+function fadeOut() {
   var imObj = document.getElementById('carimage');
   if(imObj.style.opacity > 0) {
     var o = 1;
     function opDown () {
       o -= 0.01;
-      }
     }
   }
 
-//}
+}
 
-//function hide() {
+function hide2() {
+  var piilo = document.getElementById('carimage');
+  piilo.style.display = "none";
 
-//}
+}
+
+//Exercise 5
+function addRow() {
+  var table = document.getElementById('data');
+  var row = table.insertRow(6);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = "Minna Meikäläinen";
+  cell2.innerHTML = "Taivaanrannanmaalari";
+  cell3.innerHTML = "?";
+}
+
+
 </script> 
   
 
@@ -192,7 +207,7 @@ function doMove () {
       <li><button onclick="changePosition()">Move!</button>Select the div with an id &quot;carimage&quot; and move it 200px left and 500px down</li>
       <li><button onclick="setInterval(function(){doMove();},1000); "/>Animate</button> Write a  funtion doMove() which  will move the image across the screen, or even better: back and forth on  the screen. The Interval required has already been added to the onclick -event of the list item.</li>
       <li><button onclick="setInterval(function(){fadeOut();},250);"/>Fade out!</button> Wite  a function fadeOut() which will slowly decrease the opacity of the image from 1.0 to  0 making it fade out. The Interval required has already been added to the onclick -event of the list item</li>
-      <li><button onclick="hide()"/>Disappear! </button>Finally, write JavaScript which will remove the image from the page</li>
+      <li><button onclick="hide2()"/>Disappear! </button>Finally, write JavaScript which will remove the image from the page</li>
     </ol>
   </li>
 </ul>
@@ -241,6 +256,7 @@ function doMove () {
       </tr>
     </tbody>
   </table>
+  <button type="button" onclick="addRow()">Try it</button>
 </ul>
 <p>
   Name
