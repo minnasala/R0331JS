@@ -69,7 +69,7 @@ function thirdButton(){
 // EX2: If the CORS-issue is preventing the data to be loaded, we can just use local variable
 // Online at: https://api.myjson.com/bins/18bfgz (MS)
 function loadJSONdata(){
-
+  
 var data = [
   {
     "_id": "58297a7e5ce6837d92edd2ee",
@@ -367,7 +367,24 @@ var jsonObj;
 
 function loadJSONDoc() {
 
-    var url = "https://api.myjson.com/bins/18bfgz";
+    //var url = "https://api.myjson.com/bins/18bfgz";
+    var url = "https://my-json-server.typicode.com/typicode/demo/db";
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+  xmlhttp.onreadystatechange = function() {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.getElementById("rawdata").innerHTML = xmlhttp.responseText;
+
+      var jsonObj = JSON.stringify(xmlhttp.responseText);
+
+      console.log(jsonObj);
+    }
+  }
+  
+
 
 }
 
