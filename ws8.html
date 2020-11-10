@@ -368,29 +368,46 @@ var jsonObj;
 function loadJSONDoc() {
 
     //var url = "https://api.myjson.com/bins/18bfgz";
-    var url = "https://my-json-server.typicode.com/typicode/demo/db";
-    var xmlhttp = new XMLHttpRequest();
+  var url = "https://my-json-server.typicode.com/typicode/demo/db";
+  var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
 
   xmlhttp.onreadystatechange = function() {
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      document.getElementById("rawdata").innerHTML = xmlhttp.responseText;
+      
 
       var jsonObj = JSON.stringify(xmlhttp.responseText);
-
       console.log(jsonObj);
+      document.getElementById("rawdata").innerHTML = jsonObj;
+
+      
     }
   }
-  
-
 
 }
 
 function loadJSONDocWithParse() {
 
-    var url = "https://api.myjson.com/bins/18bfgz";
+  //var url = "https://api.myjson.com/bins/18bfgz";
+  var url = "https://my-json-server.typicode.com/typicode/demo/db";
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+  xmlhttp.onreadystatechange = function() {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      
+
+      var jsonObj = JSON.parse(xmlhttp.responseText);
+      console.log(jsonObj);
+      document.getElementById("rawdata").innerHTML = jsonObj;
+
+      
+    }
+  }
 
 }
 
