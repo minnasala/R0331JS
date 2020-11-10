@@ -43,10 +43,25 @@ function firstButton(){
   '{ "firstName":"Anna" , "lastName":"Smith" },' +
   '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
-}
+  var obj = JSON.parse(text);
 
+  document.getElementById("jsondata").innerHTML = obj.employees[0].firstName + " " + obj.employees[0].lastName + "<br>" + obj.employees[1].firstName + " " + obj.employees[1].lastName + "<br>" + obj.employees[2].firstName + " " + obj.employees[2].lastName;
+}
 // Create a for loop
 function thirdButton(){
+
+  var text = '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+  var table = JSON.parse(text);
+
+  
+  for(var i = 0; i < table.employees.length; i++) {
+    document.getElementById("jsondata").innerHTML;
+  }
+  ;
 
 
 } // end for
