@@ -48,10 +48,45 @@ table, tr, td{
   //Assignment 2
 
  // function calculateTotal() {
-  //  var option = document.getElementById("type");
-  //  var choice = option.value;
+   // var cost;
+    //var option = document.getElementById("type").value;
+   // var premium = 15.00;
+    //var gold = 20.00;
+    //var platinum = 25.00;
 
-  //  if (choice = "basic")
+    //var years = parseInt(document.getElementById(years).value);
+    
+
+    //if (option == "Basic - $10.00") {
+      //var basic = 10.00;
+      
+      
+      //if (years > 2) {
+        //cost = years * (basic - (0.2 * cost));;
+        //document.getElementById(comment).innerHTML="Order of 3 years -20%, order of 5 years -20% and discount of $5.00";
+      //}else if (years => 5) {
+        //cost = years * (basic - (0.2 * cost))-5.00;
+
+      //}else {
+        //cost = basic * years;
+      //}
+      //console.log(cost);
+    //}
+    //if (option == "Premium - $15.00") {
+      //var premium = 15.00;
+      
+      
+     // if (years > 2) {
+       // cost = years * (premium - (0.2 * cost));
+        //document.getElementById(comment).innerHTML="Order of 3 years -20%, order of 5 years -20% and discount of $5.00";
+      //}else if (years => 5) {
+        //cost = years * (premium - (0.2 * cost))-5.00;
+
+      //}else {
+        //cost = premium * years;
+      //}
+      //console.log(cost);
+    //}
   //}
 
 </script>
@@ -111,7 +146,7 @@ next to form.</p>
 <p data-line="24">c) Should he pay for 5 years or   more, he will get the normal 20% 
 discount, but will also be given an   extra 5€ discount with a special greetings text on 
 screen.</p>
-<form action="" method="post" id="theForm">
+<form action="" onsubmit="return calculateTotal()" method="post" id="theForm">
         <fieldset><legend>Create Your Membership</legend>
             <p>Complete this form to calculate your membership. There's a 20% discount if 
 you enroll for more than one year!</p>
@@ -123,8 +158,8 @@ required>
 			    <option value="platinum">Platinum - $25.00</option>
 			</select></div>
 			<div><label for="years">Years</label><input type="number" 
-name="years" id="years" min="1" required></div>
-			<div><label for="cost">Cost</label><input type="text" name="cost" 
+name="years" id="years" min="1" required><span id="discount"></span></div>
+      <div><label for="cost">Cost</label><input type="text" name="cost" 
 id="cost" disabled></div>
 			<input type="submit" value="Calculate" id="submit">
   </fieldset>
