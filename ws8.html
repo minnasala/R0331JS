@@ -401,9 +401,10 @@ function loadJSONDocWithParse() {
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       
 
-      var jsonObj = JSON.parse(xmlhttp.responseText);
-      console.log(jsonObj);
-      document.getElementById("rawdata").innerHTML = jsonObj;
+      var myData = JSON.parse(xmlhttp.responseText);
+      console.log(myData);
+      
+      
 
       
     }

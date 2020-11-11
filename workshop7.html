@@ -58,15 +58,13 @@
 					var xmlDoc = xmlhttp.responseXML;
 
 					var uutiset = document.getElementsByTagName("item");
-					var uutinen = 
 
-					var list1 = document.getElementById("title1");
-					var list2 = document.getElementById("title2");
-					var list3 = document.getElementById("title3");
+					for(var i = 0; i < uutiset.length; i++) {
+						item = uutiset[i].childNodes[0].nodeValue + "<br>";
+						document.getElementById("newsfeed").innerHTML += item;
+					} 
 
-					list1.innerHTML = title[0];
-					list2.innerHTML = title[1];
-					list3.innerHTML = title[2];
+					
 
 
 				}
