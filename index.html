@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedules</title>
+    <link rel="stylesheet" href="trainstyle.css" />
+</head>
+<body>
+    
+    
+        <h1>Next Departures</h1>
+        
+            <input
+                type="text" name="searchField" id="searchField"
+                onkeyup="stSearch()"
+                placeholder="search for a station"
+                title="Type a station"
+            />
+
+            <ul id="stations">
+                <li><a href="#">Aviapolis</a></li>
+                <li>Espoo</li>
+                <li>Helsinki</li>
+                <li>Hiekkaharju</li>
+                <li>Huopalahti</li>
+                <li>Ilmala</li>
+                <li>Jorvas</li>
+                <li>Kannelmäki</li>
+                <li>Kauklahti</li>
+                <li>Kauniainen</li>
+                <li>Kera</li>
+                <li>Kerava</li>
+                <li>Kilo</li>
+                <li>Kirkkonummi</li>
+                <li>Kivistö</li>
+                <li>Koivuhovi</li>
+                <li>Koivukylä</li>
+                <li>Korso</li>
+                <li>Käpylä</li>
+                <li>Leinelä</li>
+                <li>Lentoasema</li>
+                <li>Leppävaara</li>
+                <li>Louhela</li>
+                <li>Malmi</li>
+                <li>Malminkartano</li>
+                <li>Martinlaakso</li>
+                <li>Masala</li>
+                <li>Myyrmäki</li>
+                <li>Mäkkylä</li>
+                <li>Oulunkylä</li>
+                <li>Pasila</li>
+                <li>Pitäjänmäki</li>
+                <li>Pohjois-Haaga</li>
+                <li>Puistola</li>
+                <li>Pukinmäki</li>
+                <li>Rekola</li>
+                <li>Savila</li>
+                <li>Siuntio</li>
+                <li>Tapanila</li>
+                <li>Tikkurila</li>
+                <li>Tolsa</li>
+                <li>Valimo</li>
+                <li>Vehkala</li>
+
+            </ul>
+
+      
+  
+
+    
+     
+<script>
+    function stSearch() {
+    var  input = document.getElementById("searchField");
+    var filter = input.value.toUpperCase();
+    var ul = document.getElementById("stations");
+    var li = ul.getElementsByTagName("li");
+    var a;
+    var txtValue;
+
+    for(var i = 0; i < li.length; i++) {
+        a = li.getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = none;
+        }
+    }
+}
+</script>
+</body>
+</html>
